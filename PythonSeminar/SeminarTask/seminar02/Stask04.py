@@ -1,18 +1,26 @@
-# Пользователь вводит одно число N – количество арбузов.
-# Затем пользователь последовательно вводит массы соответсвующих арбузов
-# Необходимо вывести на экран массы самого тяжелого и самого легкого арбузов
+# Дан список, состоящий из целых чисел. Напишите программу, которая сформирует список из тех элементов, которые больше предыдущего (элемента с предыдущим номером)# Примечание: Пользователь может вводить значения списка или список задан изначально.
+# Примеры/Тесты:# Input: [0, -1, 5, 2, 1]
+# Output: [5]# Input: [-2, -1, 5, 2, 3]
+# Output: [-1, 5, 3]
 
-num = int(input('Введите количество арбузов: '))
+# lst1 = []print("Пожалуйста заполните список, чтобы прекратить заполнение введите end")
 
-max_kg=0
-min_kg=999999
+# while True:    
+#     data = input()
+#     if data == "end":       
+#         break
+#     else:       
+#         list01.append(int(data))
 
-for i in range(num):
-    watermelonMass = int(input('Введите массу арбуза:'))
-    if watermelonMass
-        max_kg:
-        max_kg=watermelonMass
-    if watermelonMass<min_kg: 
-        min_kg=watermelonMass
+list1 = [-2, -1, 5, 2, 3]list2 = []
 
-print(f"Массы арбузов: min={min_kg}, max={max_kg}")
+for i in range(1, len(list1)):    
+    if list1[i] > list1[i - 1]:
+        list2.append(list1[i])
+        
+print(list2)
+
+# Усложнение: Запишите алгоритм в одну строку, используйте Comprehension
+list2 = [list1[i] for i in range(1, len(list1)) if list1[i] > list1[i - 1]]
+
+print(list2)
