@@ -1,27 +1,12 @@
-list01 = []print("Пожалуйста заполните список, чтобы прекратить заполнение введите end")
+# По данному целому неотрицательному n вычислите значение n!. N! = 1 * 2 * 3 * … * N (произведение всех чисел от 1 до N) 0! = 1 Решить задачу используя цикл while
 
-while True:    
-    data = input()
-    if data == "end":      
-        break
-    else:       
-        list01.append(int(data))
-list02 = []
+number = int(input("Введите целое положительное число"))
 
-for i in list01:    count = 0
-    for j in list02:
-        if i == j:           
-            count += 1
-    if count < 1:        
-        list02.append(i)
+count = 1
+total = 1
 
-print(f"В списке {len(list02)} ")
+while count != total:
+    total *= count
+    count += 1
 
-list02 = []
-for i in list01:   
-    if i not in list02:
-        list02.append(i)
-        
-print(f"В списке {len(list02)} ")
-
-print(len(set(list01)))
+print(total)
