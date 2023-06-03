@@ -1,25 +1,21 @@
-# Дана последовательность из N целых чисел и число K. # Необходимо сдвинуть всю последовательность (сдвиг - циклический) на K элементов вправо, K – положительное число.
-# Примечание: Пользователь может вводить значения списка или список задан изначально.
+# Дано натуральное число A > 1. Определите, каким по счету числом Фибоначчи оно является.
+# Т.е. выведите такое число n, что φ(n)=A. Если А не является числом Фибоначчи, выведите число -1.
 
-# lst1 = []print("Пожалуйста заполните список, чтобы прекратить заполнение введите end")
-# while True:   
-#     data = input()
-#     if data == "end":        
-#         break
-#     else:        
-#         list01.append(int(data))
+num = int(input('Введите число: '))
 
-lst1 = [1,6,5,4,7,8,5,1,2,6,8,5]
+first_num = 0
+second_num = 1
+third_num = first_num + second_num
 
-# int(input("Введите целое положительное число: "))
+count = 3
 
-lst2 = []k = 3 
+while num > third_num:
+    first_num = second_num
+    second_num = third_num
+    third_num = first_num + second_num
+    count += 1
 
+if third_num != num:
+    count = -1
 
-for i in range(k):
-    lst1.insert(0,lst1[-1])    
-    lst1.pop()
-print(lst1)
-
-lst2 = lst1[k:] + lst1[:k]
-print(lst1)
+print(count)
