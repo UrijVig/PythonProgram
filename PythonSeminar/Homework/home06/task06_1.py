@@ -17,8 +17,7 @@ start, step, quantity = input_list
 def subsequence(start: int, step: int, quantity: int) -> list:
     lst = []    
     for item in range(quantity):
-        lst.append(start)        
-        start += step
+        lst.append(start + step * item)        
     return lst
 
 print(subsequence(7,2,5))
