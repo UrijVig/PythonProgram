@@ -21,7 +21,7 @@ import os.path as path1
 # print(getcwd())
 
 MAIN_DIR = path1.abspath(path1.dirname(__file__))
-file_name = path1.join(MAIN_DIR, "data1.txt")
+file_name = path1.join(MAIN_DIR,"data", "data1.txt")
 
 list_data = list()
 

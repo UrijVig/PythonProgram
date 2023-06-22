@@ -66,8 +66,6 @@ def counter_vowels(data) -> list:
             count_list.append(item.count(el))
         count_vowels.append(dict(zip(set_vowels, count_list)))
     return count_vowels
-        
-    
     
 def pryme_check_hard(string, flag = True):    
     data = list(string.split())
@@ -78,6 +76,7 @@ def pryme_check_hard(string, flag = True):
             if vowels_cont(data[idx]) != vowels_cont(data[idx - 1]):
                 return False
         return True
+    
 print("\nРешение усложнённого задания: \n ")
 print(pryme_check_hard("пара-ра-рам рам-пам-папам па-ра-па-дам", False))
 print(pryme_check_hard("пара-ра-рам рам-пум-пупам па-ре-по-дам", True))
